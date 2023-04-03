@@ -5,6 +5,8 @@ import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import About from "./assets/components/About/About";
 import Contact from "./assets/components/Contact/Contact/Contact";
+import Friends from "./assets/components/Friends/Friends";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,6 +20,11 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "friends",
+        element: <Friends />,
+        loader: () => fetch("https://jsonplaceholder.typicode.com/users"),
       },
     ],
   },
