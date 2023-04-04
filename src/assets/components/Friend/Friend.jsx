@@ -1,10 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Friend = ({ friend }) => {
+  console.log(friend);
   return (
-    <div>
+    <Link
+      to={`../friend/${friend.id}`}
+      className="border border-purple-500 p-4 "
+    >
       <h2>{friend.name}</h2>
-    </div>
+      <p>email: {friend.email}</p>
+    </Link>
   );
 };
 

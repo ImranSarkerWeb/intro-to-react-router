@@ -6,7 +6,7 @@ const Friends = () => {
   const friends = useLoaderData();
 
   return (
-    <div>
+    <div className="grid grid-cols-4 gap-4">
       {friends.map((friend) => (
         <Friend key={friend.id} friend={friend}></Friend>
       ))}
