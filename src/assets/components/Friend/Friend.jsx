@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Friend = ({ friend }) => {
-  console.log(friend);
   return (
     <Link
       to={`../friend/${friend.id}`}
